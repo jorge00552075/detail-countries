@@ -1,0 +1,68 @@
+.header {
+  background-color: var(--primary-color);
+  color: var(--typography-color);
+}
+
+.header__container {
+  max-width: 128rem;
+  height: 8rem;
+  padding: 1.2rem;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+.header__btn {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.6rem;
+  background-color: transparent;
+  color: inherit;
+
+  display: flex;
+  gap: 1.2rem;
+}
+
+.header__btn:active {
+  transform: translateY(2px);
+}
+
+.header__btn:focus {
+  outline-offset: 5px;
+  outline: var(--typography-color) solid 4px;
+}
+
+.moon-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .header__container {
+    max-width: 66.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header__title {
+    font-size: 1.4rem;
+  }
+
+  .header__btn {
+    font-size: 1.2rem;
+  }
+
+  .moon-icon {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+}
