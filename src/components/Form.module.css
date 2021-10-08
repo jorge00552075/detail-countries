@@ -40,8 +40,8 @@
 }
 
 .form__input:focus {
-  outline-offset: 5px;
-  outline: var(--typography-color) solid 4px;
+  outline: none;
+  box-shadow: 0 0 0 0.5rem rgba(28, 127, 214, 0.8);
 }
 
 .form__select {
@@ -57,8 +57,8 @@
 }
 
 .form__select:focus {
-  outline-offset: 5px;
-  outline: var(--typography-color) solid 4px;
+  outline: none;
+  box-shadow: 0 0 0 0.5rem rgba(28, 127, 214, 0.8);
 }
 
 /* MEDIA QUERIES */

@@ -19,13 +19,6 @@
   text-align: center;
 }
 
-.main h1 {
-  padding-top: 8rem;
-
-  font-size: 2rem;
-  margin-bottom: 4rem;
-}
-
 .loading {
   display: inline-block;
   width: 50px;
@@ -35,6 +28,8 @@
   border-top-color: #fff;
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spin 1s ease-in-out infinite;
+
+  margin-top: 9.6rem;
 }
 
 @keyframes spin {

@@ -1,16 +1,15 @@
-import { useLocation } from 'react-router';
-import { Link } from 'react-router-dom';
-import styles from './DetailPage.module.css';
+import { useParams } from "react-router";
+import { Link } from "react-router-dom";
+import styles from "./DetailPage.module.css";
 
 function DetailPage({ data }) {
-  const location = useLocation();
+  const params = useParams();
   // SELECTED COUNTRY
-  const alpha3Code = location.pathname.slice(-3);
-  const index = data.findIndex((c) => c.alpha3Code === alpha3Code);
+  const index = data.findIndex((c) => c.alpha3Code === params.id);
   const DATA = data[index];
 
   // GET country names from alpha3Code
-  const borderCountries = DATA.borders.map((countryAlpha) => {
+  const borderCountries = DATA.borders?.map((countryAlpha) => {
     const countryObj = data.find(
       (country) => country.alpha3Code === countryAlpha
     );
@@ -18,12 +17,12 @@ function DetailPage({ data }) {
   });
 
   // BORDER COUNTRIES LINKS
-  const borderCLinks = borderCountries.map((c, i) => {
+  const borderCLinks = borderCountries?.map((c, i) => {
     return (
       <Link
         to={`/countries/${DATA.borders[i]}`}
         key={c}
-        className={styles['link--countries']}
+        className={styles["link--countries"]}
       >
         {c}
       </Link>
@@ -32,16 +31,16 @@ function DetailPage({ data }) {
 
   // https://www.delftstack.com/howto/javascript/javascript-add-commas-to-number/
   function separator(numb) {
-    var str = numb.toString().split('.');
-    str[0] = str[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    return str.join('.');
+    var str = numb.toString().split(".");
+    str[0] = str[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return str.join(".");
   }
   const population = separator(DATA.population);
 
   return (
     <main className={styles.detailpage}>
       <div className={styles.detailpage__container}>
-        <Link to={'/'} className={styles.link}>
+        <Link to={"/"} className={styles.link}>
           &larr; Back
         </Link>
         <div className={styles.detailpage__content}>
@@ -80,11 +79,11 @@ function DetailPage({ data }) {
                 </span>
                 <span>
                   <strong>Currencies: </strong>
-                  {DATA.currencies.map((c) => c.name + ' ')}
+                  {DATA.currencies?.map((c) => c.name + " ")}
                 </span>
                 <span>
                   <strong>Languages: </strong>
-                  {DATA.languages.map((l) => l.name + ' ')}
+                  {DATA.languages?.map((l) => l.name + " ")}
                 </span>
               </div>
             </div>

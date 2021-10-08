@@ -1,5 +1,4 @@
 .detailpage {
-  height: 100vh;
   padding: 2.4rem 0;
   font-size: 1.6rem;
 }
@@ -34,8 +33,8 @@
 }
 
 .link:focus {
-  outline-offset: 5px;
-  outline: var(--typography-color) solid 4px;
+  outline: none;
+  box-shadow: 0 0 0 0.5rem rgba(28, 127, 214, 0.8);
 }
 
 .detailpage__content {
@@ -44,8 +43,8 @@
 }
 
 .image__container {
-  width: 56rem;
-  height: 40rem;
+  width: 100%;
+  /* height: 40rem; */
 }
 
 .image__container img {
@@ -115,8 +114,8 @@
 }
 
 .link--countries:focus {
-  outline-offset: 5px;
-  outline: var(--typography-color) solid 4px;
+  outline: none;
+  box-shadow: 0 0 0 0.5rem rgba(28, 127, 214, 0.8);
 }
 
 /* MEDIA QUERIES */
