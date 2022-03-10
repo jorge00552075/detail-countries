@@ -1,4 +1,4 @@
-## Overview
+## Detailed Countries 
 See all countries displayed on the homepage, search for a country or filter by region.
 Click on a country to see more detailed information on a seperate page.
 
