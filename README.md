@@ -1,4 +1,4 @@
-# Overview
+## Overview
 See all countries displayed on the homepage, search for a country or filter by region.
 Click on a country to see more detailed information on a seperate page.
 
@@ -6,7 +6,7 @@ Click on a country to see more detailed information on a seperate page.
 
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com/)
-- REST Countries API (https://restcountries.com/)
+- [REST Countries API] (https://restcountries.com/)
 
 ### Links
 - [https://rest-countries-api-00552075.netlify.app/](https://rest-countries-api-00552075.netlify.app/)
